@@ -7,22 +7,22 @@ A flexible, parameterized $N$-bit Arithmetic Logic Unit (ALU) implemented in Ver
 - **Status Flags:** Computes and outputs standard hardware flags: `zero_flag`, `carry_flag`, and `neg_flag` (2's complement compliant).
 - **Pure Combinational Logic:** Designed using default initialization to ensure glitch-free, latch-free synthesis.
 
-## Supported Operations (`mode`)
+## Supported Modes
 
-| Opcode (`mode`) | Operation | Description |
+**#1111** >> Reset
+**#0000** >> Addition
+**#0001** >> Subtraction
+**#0010** >> Bitwise AND
+**#0100** >> Bitwise OR
+**#1000** >> Bitwise XOR
+**#0011** >> Less than
+**#0110** >> Equal
+**#1100** >> Greater than
+**#1110** >> in1 Right shift
+**#1101** >> in1 Left shift
+**#1011** >> in2 Right shift
+**#0111** >> in2 Left shift
 
-| `4'b0000` | Addition | `out = in1 + in2` (Sets `carry_flag`) |
-| `4'b0001` | Subtraction | `out = in1 - in2` (Sets `neg_flag`) |
-| `4'b0010` | Bitwise AND | `out = in1 & in2` |
-| `4'b0100` | Bitwise OR | `out = in1 \| in2` |
-| `4'b1000` | Bitwise XOR | `out = in1 ^ in2` |
-| `4'b0011` | Less Than | `out = 1` if `in1 < in2` else `0` |
-| `4'b0110` | Equal | `out = 1` if `in1 == in2` else `0` |
-| `4'b1100` | Greater Than | `out = 1` if `in1 > in2` else `0` |
-| `4'b1110` | Right Shift (`in1`) | Logical right shift of `in1` by 1 bit |
-| `4'b1101` | Left Shift (`in1`) | Logical left shift of `in1` (Sets `carry_flag`) |
-| `4'b1011` | Right Shift (`in2`) | Logical right shift of `in2` by 1 bit |
-| `4'b0111` | Left Shift (`in2`) | Logical left shift of `in2` (Sets `carry_flag`) |
 
 ## Simulation Results
 
