@@ -9,20 +9,19 @@ A flexible, parameterized $N$-bit Arithmetic Logic Unit (ALU) implemented in Ver
 
 ## Supported Modes
 
-**#1111** >> Reset
-**#0000** >> Addition
-**#0001** >> Subtraction
-**#0010** >> Bitwise AND
-**#0100** >> Bitwise OR
-**#1000** >> Bitwise XOR
-**#0011** >> Less than
-**#0110** >> Equal
-**#1100** >> Greater than
-**#1110** >> in1 Right shift
-**#1101** >> in1 Left shift
-**#1011** >> in2 Right shift
-**#0111** >> in2 Left shift
-
+- **`4'b1111`**: Reset
+- **`4'b0000`**: Addition
+- **`4'b0001`**: Subtraction
+- **`4'b0010`**: Bitwise AND
+- **`4'b0100`**: Bitwise OR
+- **`4'b1000`**: Bitwise XOR
+- **`4'b0011`**: Less than
+- **`4'b0110`**: Equal
+- **`4'b1100`**: Greater than
+- **`4'b1110`**: `in1` Right shift
+- **`4'b1101`**: `in1` Left shift
+- **`4'b1011`**: `in2` Right shift
+- **`4'b0111`**: `in2` Left shift
 
 ## Simulation Results
 
